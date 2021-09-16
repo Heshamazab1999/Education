@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 
 class K {
-  static const textCardHomeStyle = TextStyle(
-      fontSize: 22, color: Color(0xFF1b4965), fontWeight: FontWeight.bold);
+  static const textCardHomeStyle =
+      TextStyle(fontSize: 22, color: Colors.black, fontWeight: FontWeight.bold);
 
-  static const textBioStyle = TextStyle(
-    fontSize: 20,
-    color: K.mainColor,
-    fontWeight: FontWeight.bold
-  );
-  static const textPhoneStyle = TextStyle(
-    fontSize: 16,
-    color: K.mainColor,
-  );
+  static const textBioStyle =
+      TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold);
+  static const textpointeStyle =
+      TextStyle(fontSize: 18, color: Colors.black, fontWeight: FontWeight.bold);
+  static const textPhoneStyle =
+      TextStyle(fontSize: 16, color: Colors.black,);
   static const textLoginStyle = TextStyle(
     fontSize: 22,
     color: Colors.white,
@@ -22,11 +19,11 @@ class K {
     color: Colors.red,
   );
 
-  static const mainColor = Color(0xFF263E50);
-  static const SecondColor = Color(0xFFA0aeb8);
+  static const mainColor = Color(0xFF2596be);
+  static const SecondColor = Color(0xFF76b5c5);
 
   static const phoneNumber = "رقم الهاتف";
-  static const password = "كلمه المرور";
+  static const password = "كلمه المرور ";
   static const enter = "دخول";
   static const haveAnAccount = "هل لديك ايميل ؟ ";
   static const signUp = "تسجيل";
@@ -48,8 +45,8 @@ class K {
   static const qr = "رمز الاستجابه";
   static const files = "الملفات";
   static const name = "الاسم";
-  static const subscription = "الاشتراك الشهرى";
-  static const contact = "التواصل عبر الهاتف";
+  static const subscription = " الاشتراك الشهرى  ";
+  static const contact = "التواصل عبر الهاتف   ";
   static const whatsApp = "WhatsApp";
   static const Youtube = "youtube";
   static const facebook = "Facebook";

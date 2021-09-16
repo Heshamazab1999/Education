@@ -22,12 +22,17 @@ class TextFieldLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-      child: TextFormField(
+      child: TextFormField(style: TextStyle(
+          fontSize: 20,
+          color: Colors.white
+      ),
         keyboardType: textInputType,
         textAlign: TextAlign.right,
         onChanged: function,
         controller: controller,
         decoration: InputDecoration(
+
+
             suffixIcon: Icon(
               iconData,
               color: colorIcon,

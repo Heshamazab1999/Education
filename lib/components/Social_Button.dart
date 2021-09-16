@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:untitled5/constant.dart';
 
-class SocialButton extends StatelessWidget {
+class ProfileButton extends StatelessWidget {
   final String? label;
   final Function()? function;
   final String? image;
   final TextStyle? textStyle;
 
-  SocialButton({this.function, this.image, this.label, this.textStyle});
+  ProfileButton({this.function, this.image, this.label, this.textStyle});
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +27,15 @@ class SocialButton extends StatelessWidget {
                     style: textStyle,
                   ),
                 ),
-                SizedBox(width: 40, height: 35, child: Image.asset(image!)),
+                SizedBox(width: 50, height: 35, child: Image.asset(image!)),
               ],
             ),
           ),
           Divider(
             color: K.mainColor,
-            indent: 20,
+            indent: 40,
             thickness: 1,
-            endIndent: 20,
+            endIndent: 40,
           )
         ],
       ),

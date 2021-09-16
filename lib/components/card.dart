@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:show_up_animation/show_up_animation.dart';
 import 'package:untitled5/constant.dart';
 
 class CardHomeScreen extends StatelessWidget {
@@ -10,42 +11,46 @@ class CardHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: function,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-        child: Material(
-          elevation: 2,
-          borderRadius: BorderRadius.circular(15),
-          child: Container(
-            height: 200,
-            width: 300,
-            clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
-                color: K.SecondColor,
-                borderRadius: BorderRadius.circular(15),
-                border: Border.all(color: K.SecondColor)),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                    height: 120,
-                    width: MediaQuery.of(context).size.width,
-                    child: Image.asset(
-                      image,
-                    )),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text(
-                    label,
-                    style: K.textCardHomeStyle,
+    return ShowUpAnimation(
+        delayStart: Duration(milliseconds: 800),
+        animationDuration: Duration(milliseconds: 800),
+        curve: Curves.easeOut,
+        direction: Direction.vertical,
+        offset: 0.5,
+        child: GestureDetector(
+          onTap: function,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: Material(
+              elevation: 2,
+              borderRadius: BorderRadius.circular(20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Container(
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(20),
+                                topLeft: Radius.circular(20))),
+                        width: MediaQuery.of(context).size.width,
+                        child: Image.asset(
+                          image,
+                          fit: BoxFit.cover,
+                        )),
                   ),
-                )
-              ],
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text(
+                      label,
+                      style: K.textCardHomeStyle,
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
