@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:untitled5/constant.dart';
 
 class ContainerChooser extends StatelessWidget {
   final String? label;
@@ -18,7 +17,7 @@ class ContainerChooser extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.transparent,
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: K.mainColor),
+            border: Border.all(color: Colors.black),
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -28,12 +27,12 @@ class ContainerChooser extends StatelessWidget {
                 Icon(
                   Icons.keyboard_arrow_down,
                   size: 30,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
                 Text(
                   label!,
                   textAlign: TextAlign.right,
-                  style: TextStyle(fontSize: 22, color: Colors.white),
+                  style: TextStyle(fontSize: 22, color: Colors.black),
                 ),
               ],
             ),

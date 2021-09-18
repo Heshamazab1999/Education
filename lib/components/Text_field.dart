@@ -10,29 +10,26 @@ class TextFieldLogin extends StatelessWidget {
   final Color? color;
   final Color? colorIcon;
 
-  TextFieldLogin({this.hint,
-    this.color = Colors.white,
-    this.colorIcon = Colors.white,
-    this.function,
-    this.controller,
-    this.iconData,
-    this.textInputType});
+  TextFieldLogin(
+      {this.hint,
+      this.color = Colors.black,
+      this.colorIcon = K.mainColor,
+      this.function,
+      this.controller,
+      this.iconData,
+      this.textInputType});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-      child: TextFormField(style: TextStyle(
-          fontSize: 20,
-          color: Colors.white
-      ),
+      child: TextFormField(
+        style: TextStyle(fontSize: 20, color: Colors.black),
         keyboardType: textInputType,
         textAlign: TextAlign.right,
         onChanged: function,
         controller: controller,
         decoration: InputDecoration(
-
-
             suffixIcon: Icon(
               iconData,
               color: colorIcon,
@@ -50,10 +47,10 @@ class TextFieldLogin extends StatelessWidget {
               borderRadius: BorderRadius.all(
                 Radius.circular(15),
               ),
-              borderSide: BorderSide(color: K.mainColor, width: 1),
+              borderSide: BorderSide(color: Colors.black, width: 1),
             ),
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: K.mainColor, width: 1),
+                borderSide: BorderSide(color: Colors.black, width: 1),
                 borderRadius: BorderRadius.all(
                   Radius.circular(15),
                 ))),

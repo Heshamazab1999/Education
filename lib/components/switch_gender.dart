@@ -28,7 +28,7 @@ class ChooseGender extends StatelessWidget {
             child: Text(
               label!,
               textAlign: TextAlign.right,
-              style: TextStyle(fontSize: 18, color: Colors.white),
+              style: TextStyle(fontSize: 18, color: Colors.black),
             ),
           )
         ],

@@ -44,6 +44,8 @@ class Utility {
 
   static displayAlertPassword(
     String title,
+    Function(String)? functionText1,
+    Function(String)? functionText2,
     BuildContext context,
   ) async {
     final alert = Alert(
@@ -53,13 +55,13 @@ class Utility {
           TextFieldLogin(
             color: K.mainColor,
             colorIcon: K.mainColor,
-            function: (v) {},
+            function: functionText1,
             hint: "الرقم السرى الجديد",
             iconData: Icons.password,
             textInputType: TextInputType.name,
           ),
           TextFieldLogin(
-            function: (v) {},
+            function: functionText2,
             color: K.mainColor,
             colorIcon: K.mainColor,
             hint: "تأكيد الرقم السر ",

@@ -20,19 +20,21 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child:Obx(()=> Scaffold(
+        child: Obx(
+      () => Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-                  bottomRight: Radius.circular(20),
-                  bottomLeft: Radius.circular(20))),
+                  bottomRight: Radius.circular(50),
+                  bottomLeft: Radius.circular(50))),
           backgroundColor: K.mainColor,
           title: Text(
             label.elementAt(_controller.selectedIndex),
             style: TextStyle(fontSize: 25, color: Colors.white),
           ),
           centerTitle: true,
-         ),
+        ),
         body: Obx(() => Center(
               child: bodyContent.elementAt(_controller.selectedIndex),
             )),
@@ -64,6 +66,6 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      ));
+    ));
   }
 }

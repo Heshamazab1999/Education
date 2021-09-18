@@ -40,6 +40,10 @@ dependencies:
   flutter_staggered_grid_view: ^0.4.0
   custom_navigation_bar: ^0.8.2
   animated_card: ^2.0.0
+  flutter_animator: ^3.1.2
+  delayed_display: ^2.0.0
+  flutter_staggered_animations: ^1.0.0
+  lottie: ^1.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -47,7 +51,7 @@ dependencies:
 
 dev_dependencies:
   flutter_test:
-    sdk: flutter
+    sdk: flutterb
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

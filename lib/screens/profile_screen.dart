@@ -1,6 +1,6 @@
+import 'package:delayed_display/delayed_display.dart';
 import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
-import 'package:show_up_animation/show_up_animation.dart';
 import 'package:untitled5/components/Social_Button.dart';
 import 'package:untitled5/components/social.dart';
 import 'package:untitled5/constant.dart';
@@ -25,18 +25,15 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ShowUpAnimation(
-      delayStart: Duration(milliseconds: 800),
-      animationDuration: Duration(milliseconds: 800),
-      curve: Curves.easeOut,
-      direction: Direction.horizontal,
-      offset: 0.5,
+        body: DelayedDisplay(
+      delay: Duration(seconds: 1),
       child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Center(
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
               child: Container(
                 width: 100,
                 height: 100,
@@ -147,8 +144,21 @@ class ProfileScreen extends StatelessWidget {
                   itemCount: imagesIcon.length,
                   itemBuilder: (BuildContext context, index) => ProfileButton(
                         function: () {
-                          Utility.displayAlertPassword(
-                              "ادخال كلمه المرور", context);
+                          if (index == 2) {
+                            Utility.displayAlertVerification("ادخال الرمز",
+                                (v) {
+                              print(v);
+                            }, context);
+                          } else if (index == 3) {
+                            print("3");
+                          } else if (index == 4) {
+                            Utility.displayAlertPassword("تغير كلمه المرور",
+                                (v) {
+                              print(v);
+                            }, (v) {
+                              print(v);
+                            }, context);
+                          }
                         },
                         textStyle: K.textCardHomeStyle,
                         label: labels[index],

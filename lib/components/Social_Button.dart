@@ -15,8 +15,8 @@ class ProfileButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         children: [
-          GestureDetector(
-            onTap: function,
+          MaterialButton(
+            onPressed: function,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

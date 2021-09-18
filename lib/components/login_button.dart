@@ -17,12 +17,11 @@ class LoginButton extends StatelessWidget {
         onPressed: function,
         child: Text(
           label!,
-          style: K.textLoginStyle,
+          style: K.textLoginStylee,
         ),
         style: TextButton.styleFrom(
             backgroundColor: color,
             shape: RoundedRectangleBorder(
-
                 borderRadius: BorderRadius.circular(15))),
       ),
     );
